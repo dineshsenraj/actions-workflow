@@ -28,5 +28,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Publish the product
         run: |
-          echo Login to ${{ github.event.inputs.server }} server
-          echo Publish ${{ github.event.inputs.product }} product.
+          date > log.txt
+          echo Login to ${{ github.event.inputs.server }} server >> log.txt
+          echo Publish ${{ github.event.inputs.product }} product >> log.txt
