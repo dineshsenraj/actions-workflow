@@ -25,9 +25,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Install APIC toolkit
+        run: npm install -g apiconnect
       # Runs a set of commands using the runners shell
-      - name: Publish the product
-        run: |
-          date >> log.txt
-          echo Login to ${{ github.event.inputs.server }} server >> log.txt
-          echo Publish ${{ github.event.inputs.product }} product >> log.txt
+      - name: Check APIC version
+        run: apic -version
