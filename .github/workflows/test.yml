@@ -25,12 +25,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Install APIC toolkit
-        run: npm install apic
       - name: Log the data
         run: |
           echo APIC installed > apic.txt
           cat apic.txt
       # Runs a set of commands using the runners shell
       - name: Check APIC version
-        run: apic -version
+        run: apiconnect -version
