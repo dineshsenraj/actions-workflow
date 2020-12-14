@@ -15,7 +15,7 @@ jobs:
       - name: Check NPM version
         run: npm --version
       - name: Install Node 11
-        run: npm install -g node@11.15.0
+        run: npm install -g node@11.15.0 --prefix ~/.node_modules
       - name: Check Node Version
         run: node --version
       - name: Install APIC toolkit
