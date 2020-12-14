@@ -12,6 +12,8 @@ jobs:
   install-apic-toolkit:
     runs-on: ubuntu-latest
     steps:
+      - name: install node 11.15.0
+        run: npm install -g node@11.15.0 --prefix ~/.node_modules
       - name: Node use older version
         run: n use 11.15.0 
       - name: Check Node Version
