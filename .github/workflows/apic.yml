@@ -12,10 +12,6 @@ jobs:
   install-apic-toolkit:
     runs-on: ubuntu-latest
     steps:
-      - name: install nvm
-        run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-      - name: check nvm version
-        run: nvm -v
       - name: Node use older version
         run: n use 11.15.0 
       - name: Check Node Version
