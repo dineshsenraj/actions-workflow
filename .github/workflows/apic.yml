@@ -12,12 +12,14 @@ jobs:
   install-apic-toolkit:
     runs-on: ubuntu-latest
     steps:
-      - name: Check NPM version
-        run: npm --version
-      - name: Install Node 11
-        run: sudo npm install -g node@11.15.0 --prefix ~/.node_modules
+      - name: install nvm
+        run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+      - name: check nvm version
+        run: command -v nvm
+      - name: Node use older version
+        run: n use 11.15.0 
       - name: Check Node Version
-        run: node --version
+        run: node --version  
       - name: Install APIC toolkit
         run: npm install -g apiconnect --prefix ~/.node_modules
       - name: Check APIC toolkit Version
