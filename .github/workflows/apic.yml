@@ -19,6 +19,6 @@ jobs:
       - name: Check Node Version
         run: node --version
       - name: Install APIC toolkit
-        run: npm install apic -g --prefix ~/.node_modules
+        run: npm install apiconnect -g --prefix ~/.node_modules
       - name: Check APIC toolkit Version
         run: apic --version
