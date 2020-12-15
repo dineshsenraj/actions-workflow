@@ -16,9 +16,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '11.15.0'
-      - name: Check Node Version
-        run: node --version
+      - name: Set Local permission
+        run: sudo chown -R $USER /usr/local
       - name: Install APIC toolkit
-        run: npm install apiconnect -g --prefix ~/.node_modules
+        run: sudo npm install -g --unsafe-perm install apiconnect
       - name: Check APIC toolkit Version
         run: apic --version
