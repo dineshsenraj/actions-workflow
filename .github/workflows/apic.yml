@@ -19,6 +19,6 @@ jobs:
       - name: Set Local permission
         run: sudo chown -R $USER /usr/local
       - name: Install APIC toolkit
-        run: sudo npm install -g --unsafe-perm install apiconnect
-      - name: Check APIC toolkit Version
-        run: yes | apic --version
+        run: sudo npm install -g --unsafe-perm install apiconnect@v10
+      - name: Login to server
+        run: apic login --username apiadmin --password Boston@283283 --server apic-mgmt-api-manager-tars-apic.apps.tars.ucmcswg.com --realm provider/default-idp-2
